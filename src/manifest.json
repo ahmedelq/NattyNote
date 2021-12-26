@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "NattyNote",
+  "version": "1.0.0",
+
+  "description": "Take time-stamped YouTube notes.",
+
+  "icons": {
+    "48": "icons/nattynote.png"
+  },
+
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "exclude_globs": ["*://music.youtube.com/*"],
+      "js": ["nattynote.js"],
+      "css": ["box.css"],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["iframe.html"]
+}
