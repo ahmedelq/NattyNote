@@ -5,7 +5,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/issues)
 
 ## ⚙️ How it works
-Press `W`, the video will stop playing, a pop-up menu will show, write your note and press `Enter`. Your timestamped notes will be shown at the bottom of the video. 
+Press `W`, the video will stop playing, a prompt will show up, write your note and press `Enter`. Your timestamped notes will be shown at the bottom of the video. 
 You can also press `Q` to take notes without pausing the video. 
 
 ![NattyNote preview](https://github.com/ahmedelq/NattyNote/blob/main/preview.gif)
