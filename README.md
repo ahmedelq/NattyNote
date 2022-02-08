@@ -10,7 +10,7 @@
 
 ## ⚙️ How it works
 Press `Alt+P`, the video will stop playing, a prompt will show up, write your note and then press `Alt+Enter`. Your timestamped notes will appear at the bottom of the video. 
-You can also press `Q` to take notes without pausing the video. 
+You can also press `Alt+U` to take notes without pausing the video. Hit the `Shift` key with the previous commands to take a snapshot!
 
 ![NattyNote preview](https://github.com/ahmedelq/NattyNote/blob/main/preview.gif)
 
