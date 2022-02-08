@@ -5,10 +5,11 @@
 [![GitHub issues](https://img.shields.io/github/issues/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/issues)
 
 ## Installation
-- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nattynote/)
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nattynote/) (Pending).
+- [Chrome](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh) (Approval pending).
 
 ## ⚙️ How it works
-Press `W`, the video will stop playing, a prompt will show up, write your note and press `Enter`. Your timestamped notes will be shown at the bottom of the video. 
+Press `Alt+P`, the video will stop playing, a prompt will show up, write your note and then press `Alt+Enter`. Your timestamped notes will appear at the bottom of the video. 
 You can also press `Q` to take notes without pausing the video. 
 
 ![NattyNote preview](https://github.com/ahmedelq/NattyNote/blob/main/preview.gif)
@@ -16,6 +17,10 @@ You can also press `Q` to take notes without pausing the video.
 ## ⭐ Features
 - Lightweight.
 - Automatically pause/play the video while and after taking notes. 
+- Take video snapshots. 
+- Custumizable shortcuts.
+- Custumizable templates.
+- Auto save. 
 - Clickable timestamps.
 - RTL support.
 
