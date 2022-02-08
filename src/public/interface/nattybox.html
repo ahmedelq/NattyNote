@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔧 NattyNote Settings</title>
+    <link rel="stylesheet" href="../styles/options.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <a href="cached.html">📝 Cached notes</a>
+    </nav>
+    <main class="container">
+      <form>
+        <fieldset id="shortcuts">
+          <legend>🖮 Keybindings</legend>
+        </fieldset>
+        <fieldset id="screenshotSettings">
+          <legend>📸 Snapshots</legend>
+
+          <div>
+            <span style="display: block">
+              <input
+                type="checkbox"
+                id="screenshotUseDefaults"
+                checked
+                style="display: inline; vertical-align: middle"
+              />
+              <label
+                style="display: inline; vertical-align: middle"
+                for="screenshotUseDefaults"
+                >Use the defaults (recommended)
+              </label>
+            </span>
+
+            <label
+              for="screenshotWidth"
+              class="help"
+              title="It is recommended to keep low dimensions so that your main note-taker application can handle them"
+            >
+              Width
+            </label>
+            <input type="number" id="screenshotWidth" value="1280" />
+
+            <label for="screenshotHeight"> Height </label>
+            <input type="number" id="screenshotHeight" value="720" />
+          </div>
+          <div>
+            <label for="screenshotFileType">Format</label>
+            <select id="screenshotFileType">
+              <option value="jpeg"><pre>jpeg</pre></option>
+              <option value="webp"><pre>webp</pre></option>
+              <option value="png"><pre>png</pre></option>
+            </select>
+            <label
+              for="screenshotQuality"
+              class="help"
+              title="As the quality improves, the snapshot size will increase"
+              >Quality</label
+            >
+            <input
+              type="range"
+              id="screenshotQuality"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.75"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset id="templates">
+          <legend>🧱 Templates</legend>
+        </fieldset>
+      </form>
+      <div id="links">
+        <a
+          href="https://github.com/ahmedelq/NattyNote/blob/main/tutorial.md"
+          target="_blank"
+          ><span class="emoji">▶️</span> Tutorial</a
+        >
+        <a href="https://github.com/ahmedelq/NattyNote/" target="_blank"
+          ><span class="emoji">💻</span> Contribute</a
+        >
+        <a href="https://www.buymeacoffee.com/aheq" target="_blank"
+          ><span class="emoji">☕</span> Buy me a coffee</a
+        >
+      </div>
+    </main>
+    <footer>
+      <a href="bitcoin:bc1q3nq6yx6x65n6hwvvygn4k8cd39tr54v0sstfgr"
+        >BTC:bc1q3nq6yx6x65n6hwvvygn4k8cd39tr54v0sstfgr</a
+      >
+      <a href="ethereum:0x1a5ACab4E946Ea3F04B72DaE01877cB77e886a08"
+        >ETH:0x1a5ACab4E946Ea3F04B72DaE01877cB77e886a08</a
+      >
+    </footer>
+  </body>
+  <script src="../scripts/nattybox.js"></script>
+</html>

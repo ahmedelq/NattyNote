@@ -1,0 +1,6 @@
+* {
+  unicode-bidi: plaintext;
+}
+.none {
+  display: none;
+}

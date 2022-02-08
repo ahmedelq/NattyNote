@@ -1,0 +1,18 @@
+#input {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  cursor: text;
+  outline: none;
+  max-height: 160px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f4ecd8;
+  color: #5b4636;
+  overflow-y: auto;
+}
+
+img {
+  max-width: 170px;
+  max-height: 170px;
+  width: auto;
+  height: auto;
+}
