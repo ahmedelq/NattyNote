@@ -24,7 +24,7 @@ You can also press `Alt+U` to take notes without pausing the video. Hit the `Shi
 ![NattyNote preview](https://github.com/ahmedelq/NattyNote/blob/main/preview.gif)
 
 ## ⭐ Features
-- Lightweight. (< 20kb)
+- Lightweight. (~20kb)
 - Automatically pause/play the video while and after taking notes. 
 - Take video snapshots. 
 - Custumizable shortcuts.
