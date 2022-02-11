@@ -13,7 +13,7 @@
 
 
 ## Installation
-- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nattynote/) (New version pending).
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nattynote/)
 - [Chrome](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh)
 - [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/nattynote/gmooiijhebkgflcopagccaajmafoobbi)
 
