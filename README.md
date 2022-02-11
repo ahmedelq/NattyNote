@@ -14,6 +14,7 @@
 ## Installation
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nattynote/) (New version pending).
 - [Chrome](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh)
+- [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/nattynote/gmooiijhebkgflcopagccaajmafoobbi)
 
 ## ⚙️ How it works
 Press `Alt+P`, the video will stop playing, a prompt will show up, write your note and then press `Alt+Enter`. Your timestamped notes will appear at the bottom of the video. 
@@ -35,6 +36,13 @@ You can also press `Alt+U` to take notes without pausing the video. Hit the `Shi
 Please open an issue to:
 - Add / suggest a feature.
 - Report an issue.
+- Improve code quality.
+### Manual build
+```bash
+git clone https://github.com/ahmedelq/NattyNote.git
+cd NattyNote/src
+npm run prod
+```
 
 ## 👀 Preview
 <p align="center">
