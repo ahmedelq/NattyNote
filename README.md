@@ -41,6 +41,7 @@ Please open an issue to:
 ```bash
 git clone https://github.com/ahmedelq/NattyNote.git
 cd NattyNote/src
+npm install
 npm run prod
 ```
 
