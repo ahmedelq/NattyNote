@@ -1,3 +1,4 @@
+<h1 align="center">NattyNote</h1>
 <p align="center">
   <img width="200px" src="/media/nattynote.png" alt="NattyNote logo"></img>
   <p align="center"><strong>Take time-stamped YouTube notes</strong></p>
