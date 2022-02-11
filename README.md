@@ -29,6 +29,7 @@ You can also press `Alt+U` to take notes without pausing the video. Hit the `Shi
 - Take video snapshots. 
 - Custumizable shortcuts.
 - Custumizable templates.
+- Caption autocomplete.
 - Auto save. 
 - Clickable timestamps.
 - RTL support.
