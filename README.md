@@ -8,12 +8,12 @@
 
 [![GitHub license](https://img.shields.io/github/license/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/issues)
-[![Firefox rate](https://img.shields.io/amo/stars/nattynote?label=Firefox)](https://addons.mozilla.org/en-US/firefox/addon/nattynote/)
+[![Firefox rate](https://img.shields.io/amo/stars/nattynote?label=Firefox)](https://addons.mozilla.org/firefox/addon/nattynote/)
 
 
 
 ## Installation
-- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nattynote/)
+- [Firefox](https://addons.mozilla.org/firefox/addon/nattynote/)
 - [Chrome](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh)
 - [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/nattynote/gmooiijhebkgflcopagccaajmafoobbi)
 
