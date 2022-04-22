@@ -1,21 +1,36 @@
-# NattyNote
-**Take time-stamped YouTube notes**
+<h1 align="center">NattyNote</h1>
+<p align="center">
+  <img width="200px" src="/media/nattynote.png" alt="NattyNote logo"></img>
+  <p align="center"><strong>Take time-stamped YouTube notes</strong></p>
+</p>
+
+
 
 [![GitHub license](https://img.shields.io/github/license/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/issues)
+[![Firefox rate](https://img.shields.io/amo/stars/nattynote?label=Firefox)](https://addons.mozilla.org/firefox/addon/nattynote/)
+
+
 
 ## Installation
-- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/nattynote/)
+- [Firefox](https://addons.mozilla.org/firefox/addon/nattynote/)
+- [Chrome](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh)
+- [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/nattynote/gmooiijhebkgflcopagccaajmafoobbi)
 
 ## ⚙️ How it works
-Press `W`, the video will stop playing, a prompt will show up, write your note and press `Enter`. Your timestamped notes will be shown at the bottom of the video. 
-You can also press `Q` to take notes without pausing the video. 
+Press `Alt+P`, the video will stop playing, a prompt will show up, write your note and then press `Alt+Enter`. Your timestamped notes will appear at the bottom of the video. 
+You can also press `Alt+U` to take notes without pausing the video. Hit the `Shift` key with the previous commands to take a snapshot!
 
 ![NattyNote preview](https://github.com/ahmedelq/NattyNote/blob/main/preview.gif)
 
 ## ⭐ Features
-- Lightweight.
+- Lightweight. (~20kb)
 - Automatically pause/play the video while and after taking notes. 
+- Take video snapshots. 
+- Custumizable shortcuts.
+- Custumizable templates.
+- Caption autocomplete.
+- Auto save. 
 - Clickable timestamps.
 - RTL support.
 
@@ -23,7 +38,24 @@ You can also press `Q` to take notes without pausing the video.
 Please open an issue to:
 - Add / suggest a feature.
 - Report an issue.
+- Improve code quality.
+### Manual build
+```bash
+git clone https://github.com/ahmedelq/NattyNote.git
+cd NattyNote/src
+npm install
+npm run prod
+```
 
+## 👀 Preview
+<p align="center">
+  <img width="75%" src="/media/1.png" alt="How it works 1"></img>
+  <img width="75%" src="/media/2.png" alt="How it works 2"></img>
+  <img width="75%" src="/media/3.png" alt="How it works 3"></img>
+  <img width="75%" src="/media/4.png" alt="How it works 4"></img>
+  <img width="75%" src="/media/5.png" alt="How it works 5"></img>
+  <img width="75%" src="/media/6.png" alt="How it works 6"></img>
+</p>
 
 ## 🖖 Credits 
 - Idea inspired by [mstfelg](https://github.com/mstfelg).
