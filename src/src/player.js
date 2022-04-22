@@ -88,7 +88,7 @@ class Player {
   }
 
   goTo(seconds) {
-    this.video.fastSeek(seconds);
+    if (seconds) this.video.currentTime = seconds
   }
 
   toggle() {

@@ -13,9 +13,9 @@
    along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
 
 import userSettings from "./settings";
-import {UIElement} from "./UIElement";
+import { UIElement } from "./UIElement";
 import player from "./player";
-import {matchKey, goToEOL} from "./utils";
+import { matchKey, goToEOL } from "./utils";
 
 export class Deck extends UIElement {
   constructor() {
@@ -54,7 +54,7 @@ export class Deck extends UIElement {
         if (e.code === `Escape` || matchKey(e, userSettings.kybndg.deckBlur)) {
           this.current.blur();
           player.video.focus();
-          player.video.scrollIntoView({block: `end`, behavior: `smooth`});
+          player.video.scrollIntoView({ block: `end`, behavior: `smooth` });
         }
       }.bind(this)
     );
@@ -66,7 +66,9 @@ export class Deck extends UIElement {
 
   appendChild(child) {
     if (child instanceof HTMLElement) {
-      this.current.appendChild(child);
+      this.current.append(child);
+    } else if (child instanceof HTMLCollection) {
+      this.current.append(...child);
     } else {
       const p = document.createElement(`p`);
       p.innerHTML = child;

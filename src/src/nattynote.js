@@ -13,10 +13,10 @@
    along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
 
 import userSettings from "./settings";
-import {getCurrentURL, goToEOL, matchKey, formatTime} from "./utils";
+import { getCurrentURL, goToEOL, matchKey, formatTime } from "./utils";
 import player from "./player";
 import Prompt from "./Prompt";
-import {Deck} from "./Deck";
+import { Deck } from "./Deck";
 
 const state = {
   shouldPlayAfterPrompt: false,
@@ -135,8 +135,11 @@ async function init() {
       document.removeEventListener(`keydown`, firstTime);
       state.isMainEvtListenerConsumed = true;
       await player.initialize();
-      deck.metadata = {title: apropos.VID_TITLE, vidId: apropos.VID_ID};
-      deck.current.innerHTML = cachedNote?.content;
+      deck.metadata = { title: apropos.VID_TITLE, vidId: apropos.VID_ID };
+      const savedNotes = strNodesToHTMLNodes(cachedNote?.content);
+      makeClickableNodes(savedNotes);
+
+      deck.appendChild(savedNotes);
       handelUIRender();
     })
     .catch(() => {
@@ -151,7 +154,7 @@ async function firstTime(e) {
   if (isProvoked(e)) {
     console.log(`First time: I got provoked`);
     await player.initialize();
-    deck.metadata = {title: apropos.VID_TITLE, vidId: apropos.VID_ID};
+    deck.metadata = { title: apropos.VID_TITLE, vidId: apropos.VID_ID };
     const intro = format(userSettings.tmplts.deck);
     deck.appendChild(intro);
     handelUIRender();
@@ -183,7 +186,7 @@ function isProvoked(e) {
 async function handelKeyPress(e) {
   console.log(`handelKeyPress: `, e.code);
   if (matchKey(e, userSettings.kybndg.deckFocus)) {
-    deck.root.scrollIntoView({block: `center`});
+    deck.root.scrollIntoView({ block: `center` });
     setTimeout(() => {
       deck.current.focus();
       goToEOL(deck.current);
@@ -233,11 +236,41 @@ document.addEventListener(`nn-prompt-exit`, () => {
   postCleaning();
 });
 
+function makeClickableTS(node) {
+  console.log(`node`, node, typeof node);
+  let VID_TS = node?.dataset?.nnSeek;
+  if (!VID_TS) {
+    VID_TS = apropos.TS_RAW;
+    node.setAttribute(`data-nn-seek`, VID_TS);
+  }
+  node.addEventListener(`click`, (e) => {
+    e.preventDefault();
+    player.goTo(VID_TS);
+    player.video.focus();
+  });
+  node.contentEditable = false;
+}
+
+function strNodesToHTMLNodes(stringNode) {
+  const concreteTemplate = document.createElement(`template`);
+  concreteTemplate.innerHTML = stringNode;
+  return concreteTemplate.content.children;
+}
+
+function makeClickableNodes(nodeList) {
+  Array.from(nodeList).map((el) => {
+    const selector = `[data-nn-seek]`;
+    if (el.matches(selector)) makeClickableTS(el);
+    else [...el.querySelectorAll(selector)].map(makeClickableTS);
+  });
+}
+
 document.addEventListener(`nn-add-note`, (e) => {
   const note = e.detail.note;
   apropos.note = note;
   const template = userSettings.tmplts.note;
-  const formattedNote = format(template);
+  const formattedNote = strNodesToHTMLNodes(format(template));
+  makeClickableNodes(formattedNote);
   deck.appendChild(formattedNote);
   postCleaning();
 });

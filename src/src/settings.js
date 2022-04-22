@@ -60,7 +60,7 @@ const kybndg = {
 
 /* Default templates */
 const tmplts = {
-  note: `<p><a href="https://www.youtube.com/watch?v=(%VID_ID%)&t=(%TS_RAW%)s">(%TS_FORMATTED%)</a> (%NOTE%)</p>(%SCREENSHOT_FORMATTED%)`,
+  note: `<p><a data-nn-seek href="https://www.youtube.com/watch?v=(%VID_ID%)&t=(%TS_RAW%)s">(%TS_FORMATTED%)</a> (%NOTE%)</p>(%SCREENSHOT_FORMATTED%)`,
   screenshot: `<img src="(%SCREENSHOT_SRC%)"/>`,
   deck: `(%NOW%) <strong>(%VID_TITLE%)</strong> (%CH_NAME%)`,
 };
