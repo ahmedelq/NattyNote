@@ -1,6 +1,7 @@
-/node_modules/
-/dist/
-/build/
+src/node_modules/
+src/build/
+src/dist/
 *.pem
 *.log
+*.swp
 .env
