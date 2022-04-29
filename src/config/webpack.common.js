@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{from: `public`}],
+      patterns: [{ from: `public` }],
     }),
     new FileManagerPlugin({
       events: {
@@ -37,12 +37,12 @@ module.exports = {
               source: `./manifest/chrome.json`,
               destination: `./build/chrome/manifest.json`,
             },
-            {source: `./dist/`, destination: `./build/chrome/`},
+            { source: `./dist/`, destination: `./build/chrome/` },
             {
               source: `./manifest/firefox.json`,
               destination: `./build/firefox/manifest.json`,
             },
-            {source: `./dist/`, destination: `./build/firefox/`},
+            { source: `./dist/`, destination: `./build/firefox/` },
           ],
         },
       },
