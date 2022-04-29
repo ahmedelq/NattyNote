@@ -40,14 +40,24 @@ Please open an issue to:
 - Report an issue.
 - Improve code quality.
 ### Manual build
+
 ```bash
 git clone https://github.com/ahmedelq/NattyNote.git
 cd NattyNote/src
 npm install
-npm run prod
+npm run serve:firefox
+#Or, with chrome:
+#npm run serve:chrome
 ```
 
+### 🛣️ Future plans
+
+* Add i18n support.
+* Generalize to every video platform.
+* Rewrite in TypeScript.
+
 ## 👀 Preview
+
 <p align="center">
   <img width="75%" src="/media/1.png" alt="How it works 1"></img>
   <img width="75%" src="/media/2.png" alt="How it works 2"></img>
