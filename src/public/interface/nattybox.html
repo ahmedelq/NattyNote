@@ -73,6 +73,52 @@
         <fieldset id="templates">
           <legend>🧱 Templates</legend>
         </fieldset>
+        <fieldset id="customizeui">
+          <legend>🛠️ Customize UI</legend>
+          <div>
+            <a class="button" id="ligthTheme">Light Theme</a>
+            <a class="button" id="darkTheme">Dark Theme</a>
+            <label for="borderCheckbox">Use Border?</label>
+            <input type="checkbox" name="borderCheckbox" id="borderCheckbox">
+            <label for="sidebarCheckbox">Sidebar View?</label>
+            <input type="checkbox" name="sidebarCheckbox" id="sidebarCheckbox">
+          </div>
+          <div>
+
+            <label for="backgroundColor" class="help" title="Change the note background color">
+              Background Color
+            </label>
+            <input type="color" id="backgroundColor" name="backgroundColor" value="#f4ecd8">
+
+
+            <label for="fontColor" class="help" title="Change the note font color">
+              Font Color
+            </label>
+            <input type="color" id="fontColor" name="fontColor" value="#5b4636">
+
+            <label for="border" class="help" title="Change the note border color">
+              Border 
+            </label>
+            <input type="color" id="border" name="border" value="#5b4636">
+
+            <label for="linkColor" class="help" title="Change the note border color">
+              Link Color 
+            </label>
+            <input type="color" id="linkColor" name="linkColor" value="#5b4636">
+
+            <label for="fontSize" class="help" title="Change the note line color">
+              Font Size
+            </label>
+            <input type="number" id="fontSize" name="fontSize" value="15">
+
+            <label for="borderSize" class="help" title="Change the note border size">
+              Border Size
+            </label>
+            <input type="number" id="borderSize" name="borderSize" value="15">
+
+
+          </div>
+        </fieldset>
       </form>
       <div id="links">
         <a
