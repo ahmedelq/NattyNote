@@ -14,7 +14,8 @@
     "build": "webpack --config ./config/webpack.dev.js",
     "prod": "webpack --config ./config/webpack.prod.js",
     "serve:firefox": "web-ext run --source-dir ./build/firefox  --target firefox-desktop --start-url https://www.youtube.com/watch?v=Y7dpJ0oseIA",
-    "serve:chrome": "web-ext run --source-dir ./build/firefox  --target chromium --start-url https://www.youtube.com/watch?v=Y7dpJ0oseIA"
+    "serve:chrome": "web-ext run --source-dir ./build/firefox  --target chromium --start-url https://www.youtube.com/watch?v=Y7dpJ0oseIA", 
+    "lint": "eslint --fix"
   },
   "browserslist": [
     "Chrome >= 76",
