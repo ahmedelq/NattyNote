@@ -19,7 +19,7 @@ body {
   align-items: center;
   outline: none;
   border: 0;
-  margin: 0;
+  margin: auto;
   padding: 0;
   background-color: var(--main);
   color: var(--secondary);
@@ -65,9 +65,29 @@ fieldset {
 
 fieldset legend {
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 10px;
   cursor: default;
+}
+
+fieldset .button {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid var(--secondary);
+  padding: 5px;
+  background-color: var(--main);
+  color: var(--secondary);
+  font-size: 14px;
+  margin: 0 0 5px 0
+}
+
+fieldset .button:hover {
+  background-color: var(--disabled);
+}
+
+fieldset input {
+  width: auto;
 }
 
 fieldset div {
@@ -104,7 +124,7 @@ input[type="range"] {
   appearance: none;
   background: transparent;
   cursor: pointer;
-  width: 15rem;
+  width: auto;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {

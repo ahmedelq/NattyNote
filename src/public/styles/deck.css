@@ -1,13 +1,27 @@
+:root {
+  --useBorder: '1px';
+  --backgroundColor: #f4ecd8;
+  --fontColor: #5b4636; 
+  --borderColor: black; 
+  --linkColor: blue; 
+  --fontSize: 16px; 
+}
+
 #input {
   font-family: Georgia, "Times New Roman", Times, serif;
   cursor: text;
   outline: none;
   max-height: 160px;
   padding: 10px;
-  font-size: 16px;
-  background-color: #f4ecd8;
-  color: #5b4636;
+  border: solid var(--useBorder) var(--borderColor);
+  font-size: var(--fontSize);
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
   overflow-y: auto;
+}
+
+#input a {
+  color: var(--linkColor);
 }
 
 img {
