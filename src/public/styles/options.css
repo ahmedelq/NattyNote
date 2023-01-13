@@ -314,8 +314,10 @@ footer a {
   }
   .storedNoteItem a {
     text-align: center;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     overflow: hidden;
   }
 }
