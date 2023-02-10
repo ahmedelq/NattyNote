@@ -74,10 +74,22 @@ const ss = {
   quality: 0.75,
 };
 
-const userSettings = {};
+/* Default cutomizeui  */
+const cu = {
+  useBorder: false,
+  sidebarView: false,
+  backgroundColor: '#f4ecd8',
+  fontColor: '#5b4636',
+  borderColor: '#000',
+  linkColor: '#000',
+  fontSize: '16',
+  borderSize: '1'
+}
+
+const userSettings = [];
 
 (function () {
-  const keys = [`shortcuts`, ...Object.keys(ss), ...Object.keys(tmplts)];
+  const keys = [`shortcuts`, ...Object.keys(ss), ...Object.keys(tmplts), ...Object.keys(cu)];
 
   chrome.storage.sync.get(keys, (settings) => {
     const getSubset = (obj) =>
@@ -95,6 +107,11 @@ const userSettings = {};
     userSettings.ss = {
       ...ss,
       ...getSubset(ss),
+    };
+
+    userSettings.cu = {
+      ...cu,
+      ...getSubset(cu),
     };
   });
 })();
