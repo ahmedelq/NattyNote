@@ -5,3 +5,5 @@ src/dist/
 *.log
 *.swp
 .env
+*.lockb
+*.zip
