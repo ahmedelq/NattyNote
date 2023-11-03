@@ -21,7 +21,7 @@ window.onload = async function () {
     (k1, k2) => storedNotes[k2].timestamp - storedNotes[k1].timestamp
   );
   for (const videoID of sortedIDs) {
-    const {title, timestamp, content} = storedNotes[videoID];
+    const { title, timestamp, content } = storedNotes[videoID];
 
     const div = document.createElement(`div`);
     const link = document.createElement(`a`);

@@ -1,16 +1,7 @@
-/* 
-   Copyright (C) 2021-2022 Ahmad Alq.
+/* nattynote.js -- main logic. 
+   Copyright (C) 2021-2023 Ahmad Alq.
    This file is part of NattyNote.
-   NattyNote is free software: you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-   NattyNote is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-   You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+*/
 
 import userSettings from "./settings";
 import { getCurrentURL, goToEOL, matchKey, formatTime } from "./utils";
@@ -196,6 +187,7 @@ async function handelKeyPress(e) {
 
   if (isProvoked(e)) {
     console.log(`time to wake up`);
+    player.video.blur();
     apropos.takeTimestamp();
     if (
       matchKey(e, userSettings.kybndg.promptToggle) ||
@@ -218,9 +210,7 @@ async function handelKeyPress(e) {
   }
 }
 
-document.addEventListener(`keydown`, (e) => {
-  handelKeyPress(e);
-});
+document.addEventListener(`keydown`, handelKeyPress);
 
 function postCleaning() {
   if (state.shouldPlayAfterPrompt) {
@@ -237,7 +227,6 @@ document.addEventListener(`nn-prompt-exit`, () => {
 });
 
 function makeClickableTS(node) {
-  console.log(`node`, node, typeof node);
   let VID_TS = node?.dataset?.nnSeek;
   if (!VID_TS) {
     VID_TS = apropos.TS_RAW;

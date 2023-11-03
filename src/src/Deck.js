@@ -1,16 +1,7 @@
 /* Deck.js -- Deck note UI. 
-   Copyright (C) 2021-2022 Ahmad Alq.
+   Copyright (C) 2021-2023 Ahmad Alq.
    This file is part of NattyNote.
-   NattyNote is free software: you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-   NattyNote is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-   You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+*/
 
 import userSettings from "./settings";
 import { UIElement } from "./UIElement";
@@ -31,6 +22,7 @@ export class Deck extends UIElement {
   }
 
   addEventListeners() {
+    // caching/saving the Deck's current content
     const observer = new MutationObserver(
       function () {
         if (this._timeoutID) {
@@ -50,7 +42,7 @@ export class Deck extends UIElement {
     this.current.addEventListener(
       `keydown`,
       function (e) {
-        e.stopPropagation();
+        console.log(`[Deck]: Pressed: `, e);
         if (e.code === `Escape` || matchKey(e, userSettings.kybndg.deckBlur)) {
           this.current.blur();
           player.video.focus();

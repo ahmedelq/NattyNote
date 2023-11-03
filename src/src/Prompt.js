@@ -1,20 +1,11 @@
 /* Prompt.js -- Prompt UI. 
    Copyright (C) 2021-2022 Ahmad Alq.
    This file is part of NattyNote.
-   NattyNote is free software: you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-   NattyNote is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-   You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+*/
 
-import {UIElement} from "./UIElement";
+import { UIElement } from "./UIElement";
 import userSettings from "./settings";
-import {goToEOL, matchKey} from "./utils";
+import { goToEOL, matchKey } from "./utils";
 import close from "./icons/close.svg";
 
 export default class Prompt extends UIElement {
@@ -71,8 +62,8 @@ export default class Prompt extends UIElement {
 																			      1. Bound the box to the current page.
 																			      2. Add option to save the state.
 																		      */
-      const {current} = this;
-      const {tooltip} = this;
+      const { current } = this;
+      const { tooltip } = this;
 
       tooltip.style.cursor = `grabbing`;
       const shiftX = event.clientX - current.getBoundingClientRect().left;
@@ -119,7 +110,7 @@ export default class Prompt extends UIElement {
   show() {
     super.show();
     setTimeout(() => {
-      this.current.input.focus({preventScroll: true});
+      this.current.input.focus({ preventScroll: true });
     }, 0);
   }
 
@@ -173,9 +164,8 @@ export default class Prompt extends UIElement {
 
   addEventListners() {
     this.current.input.addEventListener(`keydown`, (e) => {
-      e.stopPropagation();
-
       if (e.code === `Tab`) {
+        console.log(`[Prompt]: Tab pressed`);
         e.preventDefault();
       }
 
@@ -195,7 +185,7 @@ export default class Prompt extends UIElement {
       if (matchKey(e, userSettings.kybndg.commitNote)) {
         const event = new CustomEvent(`nn-add-note`, {
           bubbles: true,
-          detail: {note: this.current.input.innerHTML},
+          detail: { note: this.current.input.innerHTML },
         });
         document.dispatchEvent(event);
         this.current.input.innerHTML = ``;

@@ -4,7 +4,7 @@ const CssMinimizerPlugin = require(`css-minimizer-webpack-plugin`);
 const JsonMinimizerPlugin = require(`json-minimizer-webpack-plugin`);
 const TerserPlugin = require(`terser-webpack-plugin`);
 const FileManagerPlugin = require(`filemanager-webpack-plugin`);
-const {merge} = require(`webpack-merge`);
+const { merge } = require(`webpack-merge`);
 const baseConfig = require(`./webpack.common.js`);
 
 module.exports = merge(baseConfig, {
@@ -39,8 +39,8 @@ module.exports = merge(baseConfig, {
       events: {
         onEnd: {
           archive: [
-            {source: `./build/chrome`, destination: `./build/chrome.zip`},
-            {source: `./build/firefox`, destination: `./build/firefox.zip`},
+            { source: `./build/chrome`, destination: `./build/chrome.zip` },
+            { source: `./build/firefox`, destination: `./build/firefox.zip` },
           ],
         },
       },

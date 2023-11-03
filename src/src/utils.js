@@ -39,7 +39,7 @@ export function goToEOL(element) {
 }
 
 // TODO : Can be improved!!
-export function matchKey(e, {mods = [], key}) {
+export function matchKey(e, { mods = [], key }) {
   if (!key) {
     return false;
   }

@@ -1,16 +1,7 @@
 /* nattybox.js -- . 
    Copyright (C) 2021-2022 Ahmad Alq.
    This file is part of NattyNote.
-   NattyNote is free software: you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-   NattyNote is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-   You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+*/
 
 const shortcutsMetadata = {
   promptCont: {
@@ -161,11 +152,11 @@ const userTemplates = templates;
 const userScreenshot = screenshotDefaults;
 const templateEls = [];
 const screenShotEls = {
-  automaticDims: {id: `screenshotUseDefaults`},
-  width: {id: `screenshotWidth`},
-  height: {id: `screenshotHeight`},
-  format: {id: `screenshotFileType`},
-  quality: {id: `screenshotQuality`},
+  automaticDims: { id: `screenshotUseDefaults` },
+  width: { id: `screenshotWidth` },
+  height: { id: `screenshotHeight` },
+  format: { id: `screenshotFileType` },
+  quality: { id: `screenshotQuality` },
 };
 const modifiedShortcuts = {};
 
@@ -198,7 +189,7 @@ function initTemplates() {
     label.innerText = templateDescription[template].label || ``;
     label.title = templateDescription[template].description || ``;
     textarea.addEventListener(`change`, function () {
-      chrome.storage.sync.set({[template]: this.value});
+      chrome.storage.sync.set({ [template]: this.value });
     });
     div.appendChild(label);
     div.appendChild(textarea);
@@ -227,18 +218,18 @@ function initScreenshotSettings() {
   });
 
   Object.keys(screenShotEls).map((key) => {
-    const {el} = screenShotEls[key];
+    const { el } = screenShotEls[key];
     if (el.type === `checkbox`) {
       el.checked = screenshotDefaults[key];
       el.addEventListener(`change`, function () {
-        chrome.storage.sync.set({[key]: this.checked}, () =>
+        chrome.storage.sync.set({ [key]: this.checked }, () =>
           console.log(`setting ${key}:${this.checked}`)
         );
       });
     } else {
       el.value = screenshotDefaults[key];
       el.addEventListener(`change`, function () {
-        chrome.storage.sync.set({[key]: this.value});
+        chrome.storage.sync.set({ [key]: this.value });
       });
     }
   });
@@ -271,7 +262,7 @@ window.onload = async () => {
 
   initTemplates();
   initScreenshotSettings();
-  userShortcuts = {...userShortcuts, ...loadedShortcuts};
+  userShortcuts = { ...userShortcuts, ...loadedShortcuts };
   const shortcutsContainer = document.getElementById(`shortcuts`);
   for (const shortcut in userShortcuts) {
     const div = document.createElement(`div`);
@@ -323,16 +314,16 @@ const isKbdTaken = (kbd) =>
 function commitShortcut(action, newKbd, target) {
   const newShortcuts = {
     ...userShortcuts,
-    [action]: {...userShortcuts[action], ...newKbd},
+    [action]: { ...userShortcuts[action], ...newKbd },
   };
   userShortcuts = newShortcuts;
-  chrome.storage.sync.set({shortcuts: newShortcuts}, () => {
+  chrome.storage.sync.set({ shortcuts: newShortcuts }, () => {
     target.value = renderKBDShortcut(newKbd);
   });
 }
 
 function saveShortcut(e) {
-  const {kbdAction} = e.target.dataset;
+  const { kbdAction } = e.target.dataset;
   const kbd = modifiedShortcuts[kbdAction];
   const oldKbd = userShortcuts[kbdAction];
 
@@ -370,7 +361,7 @@ function saveShortcut(e) {
 }
 
 function renderKBDShortcut(kbd) {
-  const to = {ctrlKey: `Ctrl`, altKey: `Alt`, shiftKey: `Shift`};
+  const to = { ctrlKey: `Ctrl`, altKey: `Alt`, shiftKey: `Shift` };
   const mods = kbd.mods.map((m) => to[m]);
   return `${mods.join(`+`)}${mods.length ? `+` : ``}${
     kbd.printableKey
@@ -378,7 +369,7 @@ function renderKBDShortcut(kbd) {
 }
 
 function myFunction(e) {
-  const {kbdAction} = e.target.dataset;
+  const { kbdAction } = e.target.dataset;
   if (e.target.timeout) {
     window.clearTimeout(e.target.timeout);
     e.target.style.borderColor = ``;
