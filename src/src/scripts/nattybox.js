@@ -1,5 +1,5 @@
 /* nattybox.js -- . 
-   Copyright (C) 2021-2022 Ahmad Alq.
+   Copyright (C) 2021-2023 Ahmad Alq.
    This file is part of NattyNote.
 */
 
