@@ -9,7 +9,7 @@
 [![GitHub license](https://img.shields.io/github/license/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/issues)
 [![Firefox rate](https://img.shields.io/amo/stars/nattynote?label=Firefox)](https://addons.mozilla.org/firefox/addon/nattynote/)
-[![Chrome rate](https://img.shields.io/amo/stars/nattynote?label=Chrome)]([https://addons.mozilla.org/firefox/addon/nattynote/](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh))
+[![Chrome rate](https://img.shields.io/amo/stars/nattynote?label=Chrome)](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh)
 
 
 
