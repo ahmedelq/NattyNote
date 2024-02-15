@@ -74,6 +74,18 @@ Below are the default used keybindings:
 | Copy deck content | `ALT+C` | Copies the entire deck to clipboard in `HTML` format (plaintext in Firefox). A combination of `CTRL+A` and `CTRL+C` is preferred in Firefox |
 
 ### Templates and variables
+Templates allow you to fine-tune the output of the notes in `HTML`, with useful variables.
+You can customize the templates via `NattyNote Icon` ➡️ `Settings`  ➡️ `Templates`.
+
+There are 3 templates
+| Name | Description | Default value | Example |
+|---|---|---|---|
+| Deck initialization template |  When you first take a note for the first time, this string will be added at the top of your notes. Useful to add metadata about the video.  | `(%NOW%) <strong>(%VID_TITLE%)</strong> (%CH_NAME%)` | ![Template init](https://github.com/ahmedelq/NattyNote/blob/main/media/tutorial_init_template.png) |
+| Snapshot template | Describe how to wrap the `base64` encoded image when a snapshot is created. | `<img src="(%SCREENSHOT_SRC%)"/>` | ![Template snapshot](https://github.com/ahmedelq/NattyNote/blob/main/media/tutorial_snapshot_template.png) |
+| Note template | Describe how to format a note when it is comitted. Note that `SCREENSHOT_FORMATTED` might be empty and will be substited with the `Snapshot template` desribed above.  | `<p><a href="https://www.youtube.com/watch?v=(%VID_ID%)&t=(%TS_RAW%)s">(%TS_FORMATTED%)</a>(%NOTE%)</p>(%SCREENSHOT_FORMATTED%)` | ![Template note](https://github.com/ahmedelq/NattyNote/blob/main/media/tutorial_note_template.png) |
+
+Variables:
+
 
 
 ### Auto-completion
