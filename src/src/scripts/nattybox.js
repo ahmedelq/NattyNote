@@ -111,10 +111,17 @@ const defaultShortcuts = {
   deckBlur: {
     label: `Deck blur`,
     description: `Removes focus from the notes deck and places it at the video player. It's optional since it can always be called by \`Escape\``,
-    mods: [],
-    key: ``,
-    printableKey: ``,
+    mods: [`altKey`],
+    key: `KeyK`,
+    printableKey: `K`,
     optional: true,
+  },
+  copyDeckContentToClipboard: {
+    label: `Copy deck`,
+    description: `Copies the entire deck to clipboard in html format (plaintext in Firefox)`,
+    mods: [`altKey`],
+    key: `KeyC`,
+    printableKey: `C`,
   },
 };
 
