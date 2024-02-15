@@ -4,42 +4,44 @@
   <p align="center"><strong>Take time-stamped YouTube notes</strong></p>
 </p>
 
+[![GitHub license](https://img.shields.io/github/license/ahmedelq/NattyNote?=&style=for-the-badge&logo=GitHub&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2)](https://github.com/ahmedelq/NattyNote/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/ahmedelq/NattyNote?=&style=for-the-badge&logo=GitHub&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2)](https://github.com/ahmedelq/NattyNote/issues)
+[![Firefox rate](https://img.shields.io/amo/stars/nattynote?label=Firefox&style=for-the-badge&logo=firefox&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2)](https://addons.mozilla.org/firefox/addon/nattynote/)
+[![Chrome rate](https://img.shields.io/amo/stars/nattynote?label=Chrome&style=for-the-badge&logo=Google+Chrome&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2)](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh)
 
+## 📦 Installation
 
-[![GitHub license](https://img.shields.io/github/license/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/ahmedelq/NattyNote)](https://github.com/ahmedelq/NattyNote/issues)
-[![Firefox rate](https://img.shields.io/amo/stars/nattynote?label=Firefox)](https://addons.mozilla.org/firefox/addon/nattynote/)
-[![Chrome rate](https://img.shields.io/amo/stars/nattynote?label=Chrome)](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh)
-
-
-
-## Installation
 - [Firefox](https://addons.mozilla.org/firefox/addon/nattynote/)
 - [Chrome](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh)
 - [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/nattynote/gmooiijhebkgflcopagccaajmafoobbi)
 
 ## ⚙️ How it works
-Press `Alt+P`, the video will stop playing, a prompt will show up, write your note and then press `Alt+Enter`. Your timestamped notes will appear at the bottom of the video. 
+
+Press `Alt+P`, the video will stop playing, a prompt will show up, write your note and then press `Alt+Enter`. Your timestamped notes will appear at the bottom of the video.
 You can also press `Alt+U` to take notes without pausing the video. Hit the `Shift` key with the previous commands to take a snapshot!
 
 ![NattyNote preview](https://github.com/ahmedelq/NattyNote/blob/main/preview.gif)
 
 ## ⭐ Features
+
 - Lightweight. (~20kb)
-- Automatically pause/play the video while and after taking notes. 
-- Take video snapshots. 
+- Automatically pause/play the video while and after taking notes.
+- Take video snapshots.
 - Custumizable shortcuts.
 - Custumizable templates.
 - Caption autocomplete.
-- Auto save. 
+- Auto save.
 - Clickable timestamps.
 - RTL support.
 
 ## 🌱 Contribution
+
 Please open an issue to:
+
 - Add / suggest a feature.
 - Report an issue.
 - Improve code quality.
+
 ### Manual build
 
 ```bash
@@ -53,9 +55,9 @@ npm run serve:firefox
 
 ### 🛣️ Future plans
 
-* Add i18n support.
-* Generalize to every video platform.
-* Rewrite in TypeScript.
+- Add i18n support.
+- Generalize to every video platform.
+- Rewrite in TypeScript.
 
 ## 👀 Preview
 
@@ -68,8 +70,6 @@ npm run serve:firefox
   <img width="75%" src="/media/6.png" alt="How it works 6"></img>
 </p>
 
-## 🖖 Credits 
-- Idea inspired by [mstfelg](https://github.com/mstfelg).
-
 ## 📜 License
-[GPL-3.0](https://github.com/ahmedelq/NattyNote/blob/main/LICENSE)
+
+NattyNote is released under [GPL-3.0 License](https://github.com/ahmedelq/NattyNote/blob/main/LICENSE). Check the LICENSE file for details.
