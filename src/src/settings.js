@@ -46,9 +46,9 @@ const kybndg = {
     printableKey: `K`,
   },
   deckBlur: {
-    mods: [],
-    key: ``,
-    printableKey: ``,
+    mods: [`altKey`],
+    key: `KeyK`,
+    printableKey: `K`,
     optional: true,
   },
   commitNote: {
