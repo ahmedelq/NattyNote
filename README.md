@@ -84,12 +84,22 @@ There are 3 templates
 | Snapshot template | Describe how to wrap the `base64` encoded image when a snapshot is created. | `<img src="(%SCREENSHOT_SRC%)"/>` | ![Template snapshot](https://github.com/ahmedelq/NattyNote/blob/main/media/tutorial_snapshot_template.png) |
 | Note template | Describe how to format a note when it is comitted. Note that `SCREENSHOT_FORMATTED` might be empty and will be substited with the `Snapshot template` desribed above.  | `<p><a href="https://www.youtube.com/watch?v=(%VID_ID%)&t=(%TS_RAW%)s">(%TS_FORMATTED%)</a>(%NOTE%)</p>(%SCREENSHOT_FORMATTED%)` | ![Template note](https://github.com/ahmedelq/NattyNote/blob/main/media/tutorial_note_template.png) |
 
-Variables:
-
+**Variables**:
+| Name | Code | Description | Example |
+|---|---|---|---|
+| Video ID | `VID_ID` | Stores YouTube unique video ID | `iw97uvIge7c` |
+| Raw timestamp | `TS_RAW` | A in double-precision floating-point value that represents the timestamp in in seconds at which a particular note has been taken. | `47.543641` |
+| Formatted timestamp | `TS_FORMATTED` | Human-friendly representaiton of the raw timestamp | `00:46` |
+| Note | `NOTE` | This is the actual note taken by the user | `This is a note with a snapshot!` |
+| Formatted snapshot | `SCREENSHOT_FORMATTED` | *A substitution for the `Snapshot template` desribed above. It might be empty (null) in case no snapshots were taken. | `<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQA.../>` |
+| Snapshot sourcecode | `SCREENSHOT_SRC` | A representaiton of a snapshot endeded in `base64` | `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQA..` |
+| Current date and time | `NOW` | Current date and time | `2/15/2024, 3:59:33 PM` |
+| Video title | `VID_TITLE` | Video title |  `Using Caffeine to Optimize...` |
+| Channel name | `CH_NAME` | Channel name | `Andrew Huberman` |
 
 
 ### Auto-completion
-![NattyNote Auto-completion](https://github.com/ahmedelq/NattyNote/blob/main/tutorial-inserting-caption.gif)
+![NattyNote Auto-completion](https://github.com/ahmedelq/NattyNote/blob/main/media/tutorial-inserting-caption.gif)
 
 To enable caption auto-completion:
 1. Turn-on YouTube captions, hit `c` (YouTube shortcut) or click the `CC` icon to activate closed captions.
