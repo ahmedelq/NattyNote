@@ -4,10 +4,13 @@
   <p align="center"><strong>Take time-stamped YouTube notes</strong></p>
 </p>
 
-[![GitHub license](https://img.shields.io/github/license/ahmedelq/NattyNote?=&style=for-the-badge&logo=GitHub&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2)](https://github.com/ahmedelq/NattyNote/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/ahmedelq/NattyNote?=&style=for-the-badge&logo=GitHub&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2)](https://github.com/ahmedelq/NattyNote/issues)
-[![Firefox rate](https://img.shields.io/amo/stars/nattynote?label=Firefox&style=for-the-badge&logo=firefox&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2)](https://addons.mozilla.org/firefox/addon/nattynote/)
-[![Chrome rate](https://img.shields.io/amo/stars/nattynote?label=Chrome&style=for-the-badge&logo=Google+Chrome&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2)](https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh)
+
+<div align="center">
+<a href="https://addons.mozilla.org/firefox/addon/nattynote/" target="_blank"><img alt="GitHub Issues" src="https://img.shields.io/amo/stars/nattynote?label=Firefox&style=for-the-badge&logo=firefox&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2" /></a>
+<a href="https://chrome.google.com/webstore/detail/nattynote/lgopopmbcfmojhfmnlbhjhgepclocphh" target="_blank"><img alt="Chrome rating" src="https://img.shields.io/amo/stars/nattynote?label=Chrome&style=for-the-badge&logo=Google+Chrome&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2" /></a>
+<a href="https://github.com/ahmedelq/NattyNote/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/ahmedelq/NattyNote?=&style=for-the-badge&logo=GitHub&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2" /></a>
+<a href="https://github.com/ahmedelq/NattyNote/issues" target="_blank"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/ahmedelq/NattyNote?=&style=for-the-badge&logo=GitHub&logoColor=5B4636&color=F4ECD8&labelColor=dcd4c2" /></a>
+</div>
 
 ## 📦 Installation
 
