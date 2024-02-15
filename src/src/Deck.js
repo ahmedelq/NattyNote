@@ -47,6 +47,19 @@ export class Deck extends UIElement {
           this.current.blur();
           player.video.focus();
           player.video.scrollIntoView({ block: `end`, behavior: `smooth` });
+        } else if (
+          matchKey(e, userSettings.kybndg.copyDeckContentToClipboard)
+        ) {
+          this.copyContentToClipboard().then(() =>
+            this.current.animate(
+              {
+                opacity: [1, 0.2, 0.2, 1],
+              },
+              {
+                duration: 500,
+              }
+            )
+          );
         }
       }.bind(this)
     );
@@ -54,6 +67,31 @@ export class Deck extends UIElement {
 
   clear() {
     this.current.innerHTML = ``;
+  }
+
+  async copyContentToClipboard() {
+    if (typeof ClipboardItem !== `undefined`) {
+      // ClipboardItem is not supported in Firefox
+      const clipboarditem = new ClipboardItem({
+        "text/html": new Blob([this.current.innerHTML], { type: `text/html` }),
+      });
+      return navigator.clipboard.write([clipboarditem]);
+    } else {
+      // if ClipboardItem is not supported, then do it the old way (text only)
+      this.current.focus();
+
+      const selection = window.getSelection();
+      // save original selection range
+      const oldRange = selection.getRangeAt(0).cloneRange();
+      const range = document.createRange();
+      range.selectNodeContents(this.current);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      const selectedContent = selection.toString();
+      selection.removeAllRanges();
+      selection.addRange(oldRange);
+      return navigator.clipboard.writeText(selectedContent);
+    }
   }
 
   appendChild(child) {

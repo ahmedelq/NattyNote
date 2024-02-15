@@ -1,35 +1,33 @@
 {
-	"name": "NattyNote",
-	"description": "Take time-stamped YouTube notes.",
-	"version": "2.1.0",
-	"manifest_version": 3,
-	"author": {
-	  "name": "Ahmad Alq",
-	  "url": "https://github.com/ahmedelq/NattyNote/"
-	},
-	"icons": {
-	  "48": "icons/nn.png"
-	},
-	"permissions": ["storage", "unlimitedStorage", "*://*.youtube.com/*"],
-      
-	"action": {
-	  "default_popup": "./interface/cached.html"
-	},
-      
-	"content_scripts": [
-	  {
-	    "matches": ["*://*.youtube.com/*"],
-	    "js": ["nattynote.js"]
-	  }
-	],
-      
-	"web_accessible_resources": [
-	  { "resources": ["styles/*"], "matches": ["<all_urls>"] }
-	],
-	"options_page": "./interface/cached.html",
-	"options_ui": {
-	  "page": "./interface/nattybox.html",
-	  "open_in_tab": true
-	}
+  "name": "NattyNote",
+  "description": "Take time-stamped YouTube notes.",
+  "version": "2.1.1",
+  "manifest_version": 3,
+  "author": {
+    "name": "Ahmad Alq",
+    "url": "https://github.com/ahmedelq/NattyNote/"
+  },
+  "icons": {
+    "48": "icons/nn.png"
+  },
+  "permissions": ["storage", "unlimitedStorage", "clipboardWrite", "*://*.youtube.com/*"],
+
+  "action": {
+    "default_popup": "./interface/cached.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["nattynote.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    { "resources": ["styles/*"], "matches": ["<all_urls>"] }
+  ],
+  "options_page": "./interface/cached.html",
+  "options_ui": {
+    "page": "./interface/nattybox.html",
+    "open_in_tab": true
+  }
 }
-      

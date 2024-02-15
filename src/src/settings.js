@@ -56,6 +56,11 @@ const kybndg = {
     key: `Enter`,
     printableKey: `Enter`,
   },
+  copyDeckContentToClipboard: {
+    mods: [`altKey`],
+    key: `KeyC`,
+    printableKey: `C`,
+  },
 };
 
 /* Default templates */
@@ -86,7 +91,7 @@ const userSettings = {};
         return obj;
       }, {});
 
-    userSettings.kybndg = settings?.shortcuts || kybndg;
+    userSettings.kybndg = { ...kybndg, ...settings?.shortcuts };
     userSettings.tmplts = {
       ...tmplts,
       ...getSubset(tmplts),

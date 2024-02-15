@@ -1,34 +1,26 @@
 {
-	"name": "NattyNote",
-	"description": "Take time-stamped YouTube notes.",
-	"version": "2.1.0",
-	"manifest_version": 2,
-	"author": "Ahmad Alq",
-	"icons": {
-	  "48": "icons/nn.png"
-	},
-	"permissions": ["storage", "unlimitedStorage", "*://*.youtube.com/*"],
-	"content_scripts": [
-	  {
-	    "matches": ["*://*.youtube.com/*"],
-	    "js": ["nattynote.js"]
-	  }
-	],    
-	"web_accessible_resources": ["styles/*"],    
-	"browser_action": {
-		"default_title": "Whereami?",
-		"default_popup": "./interface/cached.html"
-	},
-	"options_ui": {
-	  "page": "./interface/nattybox.html",
-	  "open_in_tab": true
-	}, 
-	"browser_specific_settings": {
-		"gecko": {
-		  "id": "ahmelq@outlook.sa",
-		  "strict_min_version": "42.0"
-		}
-	      }
-	      
-      }
-      
+  "name": "NattyNote",
+  "description": "Take time-stamped YouTube notes.",
+  "version": "2.1.1",
+  "manifest_version": 2,
+  "author": "Ahmad Alq",
+  "icons": {
+    "48": "icons/nn.png"
+  },
+  "permissions": ["storage", "unlimitedStorage", "clipboardWrite", "*://*.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["nattynote.js"]
+    }
+  ],
+  "web_accessible_resources": ["styles/*"],
+  "browser_action": {
+    "default_title": "Whereami?",
+    "default_popup": "./interface/cached.html"
+  },
+  "options_ui": {
+    "page": "./interface/nattybox.html",
+    "open_in_tab": true
+  }
+}
