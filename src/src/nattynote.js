@@ -39,7 +39,7 @@ const apropos = {
     return new Date().toLocaleString();
   },
   get TS_FORMATTED() {
-    return this.TS_RAW ? formatTime(this.TS_RAW) : ``;
+    return this?.TS_RAW >= 0 ? formatTime(this.TS_RAW) : ``;
   },
   get SCREENSHOT_FORMATTED() {
     return this.SCREENSHOT_SRC ? format(userSettings.tmplts.screenshot) : ``;
